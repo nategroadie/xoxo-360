@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.2.0/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+    
+       
+    
+        <!--sky sphere-->      
+    <img id="sky" src="https://cdn.glitch.com/055d1dde-2402-4b69-916d-3ede444edb0b%2FImage%2026.jpg?1536447192010">
+    
+    
+    <img id="xoxocube" src="https://cdn.glitch.com/055d1dde-2402-4b69-916d-3ede444edb0b%2F3EAAAF8E-085C-490A-A54E-3195D649BEB0.jpeg?1536447619038">
+        
+    <img id="spheremap" src="https://cdn.glitch.com/055d1dde-2402-4b69-916d-3ede444edb0b%2F15551BCF-F1AE-4D2D-97ED-3EABB9B80E52.jpeg?1536465597172">
+    
+       
+        
+        
+        
+
+  </a-assets>
+      
+        <a-camera position="0 1.6 0">
+   
+    </a-camera>
+    <a-entity laser-controls="hand: left" line="color: #FF00FF; opacity: 0.75" ></a-entity>    
+    <a-entity laser-controls="hand: right" line="color: #FF00FF; opacity: 0.75"></a-entity>
+      
+      <a-entity laser-controls line="color: #FF00FF; opacity: 0.75"></a-entity>
+      
+   
+   
+      
+       
+      <a-entity id="xoxocube1">
+      <a-box class="clickable" id="cube1" position="0 1 -3" rotation="0 0 0" depth="1" width="1" height="1" src="#xoxocube"></a-box>
+        <a-animation easing="ease" attribute="position" direction="alternate" dur="130000" to="-12.5 3.2 6" repeat="indefinite"></a-animation>
+       <a-animation attribute="rotation" dur="50100" fill="forwards" to="360 360 360" repeat="indefinite"></a-animation>
+      
+      </a-entity>
+      
+      
+      <a-entity id="xoxocube2">
+      <a-box class="clickable" id="cube2" position="-2.5 -1 -4.2" rotation="0 0 0" depth="1" width="1" height="1" src="#xoxocube"></a-box>
+        <a-animation easing="ease" attribute="position" direction="alternate" dur="155000" to="8.5 -3.2 2" repeat="indefinite"></a-animation>
+       <a-animation attribute="rotation" dur="50100" fill="forwards" to="360 360 360" repeat="indefinite"></a-animation>
+      
+      </a-entity>
+      
+      <a-entity id="xoxocube3">
+      <a-box class="clickable" id="cube3" position="2.2 2.7 3" rotation="0 0 0" depth="1" width="1" height="1" src="#xoxocube"></a-box>
+        <a-animation easing="ease" attribute="position" direction="alternate" dur="105000" to="-5.5 4.2 5" repeat="indefinite"></a-animation>
+       <a-animation attribute="rotation" dur="50100" fill="forwards" to="360 360 360" repeat="indefinite"></a-animation>
+      
+      </a-entity>
+      
+      <a-entity id="xoxocube4">
+      <a-box class="clickable" id="cube4" position="5 5.6 6" rotation="0 0 0" depth="1" width="1" height="1" src="#xoxocube"></a-box>
+        <a-animation easing="ease" attribute="position" direction="alternate" dur="1630000" to="12.5 3.2 3" repeat="indefinite"></a-animation>
+       <a-animation attribute="rotation" dur="50100" fill="forwards" to="360 360 360" repeat="indefinite"></a-animation>
+      
+      </a-entity>
+      
+      
+      
+      
+        
+      <!-- first sphere -->
+      <a-entity id="sphere1" geometry="primitive: sphere" position="-5.7 1.25 5" radius="1.25" material="color: #C0C0C0; metalness:.95; roughness: 0.1; sphericalEnvMap: #sky">
+      <a-animation easing="ease" attribute="position" direction="alternate" dur="145000" to="-8.5 6.5 -5.7" repeat="indefinite"></a-animation>
+      </a-entity>
+     
+    
+      <!--second sphere -->
+        <a-entity id="sphere2" geometry="primitive: sphere" position="6 -1.45 -18" radius="1.25"  material="color: #C0C0C0; metalness:.95; roughness: 0.1; sphericalEnvMap: #sky">
+      <a-animation easing="linear" attribute="position" direction="alternate" dur="145500" to="7 -12 7" repeat="indefinite"></a-animation>
+      </a-entity>
+
+      <!-- third sphere -->
+      
+      <a-entity id="sphere3" geometry="primitive: sphere" position="4.3 1.95 -9" radius="1.25"  material="color: #C0C0C0; metalness:.95; roughness: 0.1; sphericalEnvMap: #sky">
+      <a-animation easing="linear" attribute="position" direction="alternate" dur="250000" to="-9 -2 13" repeat="indefinite"></a-animation>
+     
+               
+               
+      </a-entity>
+      
+        <a-sky src="#sky"></a-sky>
+      
+         
+       
+    </a-scene>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+    
+
+</html>
